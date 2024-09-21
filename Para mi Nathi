@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dedicatoria de Primavera para Mamior</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Estilo del fondo estrellado */
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .capsule {
+            width: 300px;
+            height: 500px;
+            background: url('https://i.imgur.com/FwSj3bs.png') no-repeat center;
+            background-size: contain;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .flowers {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50px;
+            animation: swing 4s ease-in-out infinite;
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(3deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-3deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .dedication {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dedication h1 {
+            color: #ffd700;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .dedication p {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fondo estrellado -->
+    <div class="stars"></div>
+
+    <div class="capsule">
+        <!-- Aquí puedes colocar la imagen de las flores animadas -->
+        <img src="/mnt/data/A_magical_glass_capsule_containing_an_elegant_arra.png" alt="Flores amarillas" class="flowers">
+    </div>
+
+    <div class="dedication">
+        <h1>Para Mamior 🌼</h1>
+        <p>Feliz Día de la Primavera, amor.</p>
+        <p>Gracias por llenar mi vida de color y felicidad.</p>
+    </div>
+
+    <script>
+        // Generador de estrellas
+        const starCount = 150;
+        const starsContainer = document.querySelector('.stars');
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.animationDuration = Math.random() * 2 + 2 + 's';
+            star.style.animationDelay = Math.random() * 4 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
